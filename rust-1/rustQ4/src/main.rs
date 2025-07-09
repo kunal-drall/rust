@@ -1,15 +1,18 @@
-struct User {
-    first_name: String,
-    last_name: String,
-    age: i32,
+struct Rect {
+    width: u32,
+    height: u32,
 }
 
-fn main() {
-    let user = User {
-        first_name: String::from("Kunal"),
-        last_name: String::from("Drall"),
-        age: 21,
-    };
+impl Rect {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
 
-    println!("{}", user.first_name);
+fn main() { 
+    let rect = Rect {
+        width: 30,
+        height: 50,
+    };
+    println!("The area of the reactangle is {}", rect.area());
 }
